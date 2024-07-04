@@ -1,0 +1,3 @@
+/home/ekon-ihc/Desktop/COM-Bus/I2C/cmake-build-debug/CMakeFiles/I2C.dir
+/home/ekon-ihc/Desktop/COM-Bus/I2C/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ekon-ihc/Desktop/COM-Bus/I2C/cmake-build-debug/CMakeFiles/rebuild_cache.dir
