@@ -4,23 +4,28 @@
 #pragma once
 #include <iostream>
 
+
 #ifndef I2C_I2C_H
 #define I2C_I2C_H
 
+#define uint8 unsigned char
+#define int8 char
+#define uint16 unsigned short
+#define int16 short
 
 class I2C {
 private:
-    int SCL, SDA;
+    uint8 SCL, SDA;
 public:
-    I2C(int clock, int data);
-    void Transmit();
-    void Receive();
+    I2C(uint8 clock, uint8 data);
+    void Write();
+    void Read();
     ~I2C();
 
 };
 
 /** Constructor */
-I2C::I2C(int clock, int data) {
+I2C::I2C(uint8 clock, uint8 data) {
     SCL = clock;
     SDA = data;
 }
@@ -30,14 +35,14 @@ I2C::~I2C() {
     /* class destruction */
 }
 
-/** Transmitter */
-void I2C::Transmit() {
-    std::cout<<"I2C : Data transmission" << "\n"<< SDA <<" Transmitted"<<std::endl;
+/** Writer */
+void I2C::Write() {
+    std::cout<<"I2C : Data writing" << "\n"<< (int)SDA <<" wrote"<<std::endl;
 }
 
-/** Receiver */
-void I2C::Receive() {
-    std::cout<<"I2C : Data reception"<< "\n"<< SDA <<" Received"<<std::endl;
+/** Reader */
+void I2C::Read() {
+    std::cout<<"I2C : Data reading"<< "\n"<< (int)SDA <<" Read"<<std::endl;
 }
 
 #endif //I2C_I2C_H
